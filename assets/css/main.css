@@ -2953,3 +2953,20 @@ input, select, textarea {
 		color: #333;
 		margin-right: 10px; /* Add some spacing to the right of the button */
 	  }
+
+	  #info-text {
+		overflow: hidden;
+		white-space: nowrap;
+		border-right: 0.15em solid #000; /* Adjust border style */
+		animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+	  }
+	
+	  @keyframes typing {
+		from { width: 0; }
+		to { width: 100%; }
+	  }
+	
+	  @keyframes blink-caret {
+		from, to { border-color: transparent; }
+		50% { border-color: #000; } /* Adjust caret color */
+	  }

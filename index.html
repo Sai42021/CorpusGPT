@@ -42,8 +42,8 @@
         <!-- Banner -->
         <section id="banner">
           <header>
-            <h2>Good day, let's optimize!</h2>
-            <p>CorpusGPT, optimizing your effecinecy.</p>
+            <h2 id="header-text">Good day, let's optimize!</h2>
+            <p id="info-text">CorpusGPT, optimizing your effecinecy.</p>
           </header>
         </section>
 
@@ -100,6 +100,22 @@
 	  </div>
 
     <!-- Scripts -->
+    <script>
+      // JavaScript code to start typing effect
+      const infoText = document.getElementById('info-text');
+      const textContent = infoText.innerHTML;
+      infoText.innerHTML = '';
+  
+      let index = 0;
+      const typingInterval = setInterval(() => {
+        infoText.innerHTML += textContent[index];
+        index++;
+        
+        if (index === textContent.length) {
+          clearInterval(typingInterval);
+        }
+      }, 50); // Adjust typing speed in milliseconds
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
