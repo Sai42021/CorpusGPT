@@ -1614,7 +1614,7 @@ input, select, textarea {
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: black;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1632,7 +1632,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #e53359;
+			background: black;
 		}
 
 		input[type="button"]:active,
@@ -1640,7 +1640,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #c51349;
+			background: black;
 		}
 
 		input[type="button"].alt,
@@ -1828,7 +1828,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 1.3em;
-			background-color: #d52349;
+			background-color: black;
 			height: 3.5em;
 			text-align: center;
 			color: #fff;
@@ -1944,11 +1944,11 @@ input, select, textarea {
 					}
 
 				ul.social li a.fa-dribbble {
-					background: #c4376b;
+					background: black;
 				}
 
 					ul.social li a.fa-dribbble:hover {
-						background: #d4477b;
+						background: black;
 					}
 
 				ul.social li a.fa-linkedin {
@@ -2070,6 +2070,7 @@ input, select, textarea {
 		border-bottom: solid 1px #ccc;
 		padding: 5em 0 4em 0;
 		text-align: center;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 	}
 
 		#header h1 {
@@ -2117,7 +2118,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li.current > a {
-					background: #d52349;
+					background: black;
 					color: #fff !important;
 					font-weight: 700;
 				}
@@ -2173,7 +2174,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
+		background: #252122 url("../../images/backImage.jpg");
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -2846,6 +2847,7 @@ input, select, textarea {
 			#header {
 				text-align: center;
 				padding: 2em 0;
+				box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 			}
 
 				#header h1 {
@@ -2912,7 +2914,7 @@ input, select, textarea {
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		background-color: #f5f5f5;
+		background-color: black;
 		border: 1px solid #ddd;
 		border-radius: 0 0 8px 8px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -2931,6 +2933,7 @@ input, select, textarea {
 		border: none;
 		border-top: 1px solid #ddd;
 		outline: none;
+		border-radius: 40px;
 	  }
 
 	  #chat-input-container {
