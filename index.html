@@ -8,6 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="homepage is-preload">
@@ -95,9 +96,14 @@
         </section>
       </section>
 
-      <!-- Main -->
-      <section id="main"></section>
-    </div>
+      <!-- chat section -->
+	  <div id="chat-container">
+		<div id="chat-messages">
+		  <!-- Chat messages will be displayed here -->
+		</div>
+		<input id="chat-input" type="text" placeholder="Type your message...">
+		<button id="send-button" style="color: black;" href="#"><i class="fas fa-paper-plane"></i></button>
+	  </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
