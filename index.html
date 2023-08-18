@@ -43,7 +43,7 @@
         <section id="banner">
           <header>
             <h2 id="header-text">Good day, let's optimize!</h2>
-            <p id="info-text">CorpusGPT, optimizing your effecinecy.</p>
+            <p id="info-text">CorpusGPT, streamlining your work and effecinecy.</p>
           </header>
         </section>
 
@@ -115,6 +115,14 @@
           clearInterval(typingInterval);
         }
       }, 50); // Adjust typing speed in milliseconds
+
+      function isElementInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
