@@ -10,7 +10,14 @@
     />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!--External Bootstrap-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
+
   <body class="homepage is-preload">
     <div id="page-wrapper">
       <!-- Header -->
@@ -34,8 +41,8 @@
                 <li><a href="#">German</a></li>
               </ul>
             </li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="right-sidebar.html">Login</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#responseModal">History</a></li>
+            <li><a href="#">Log Out</a></li>
           </ul>
         </nav>
 
@@ -50,7 +57,7 @@
         <!-- Intro -->
         <section id="intro" class="container">
           <div class="row">
-            <div class="col-4 col-12-medium">
+            <div class="col-4">
               <section class="first">
                 <i class="icon solid featured alt fa-bolt"></i>
                 <header>
@@ -64,7 +71,7 @@
                 </p>
               </section>
             </div>
-            <div class="col-4 col-12-medium">
+            <div class="col-4">
               <section class="last">
                 <i class="icon solid featured alt2 fa-star"></i>
                 <header>
@@ -80,7 +87,7 @@
                 </p>
               </section>
             </div>
-            <div class="col-4 col-12-medium">
+            <div class="col-4">
               <section class="first">
                 <i class="icon solid featured fa-cog"></i>
                 <header>
@@ -100,6 +107,82 @@
           </div>
         </section>
       </section>
+      
+<!-- Modal -->
+<!-- Large modal -->
+<div class="modal fade bd-example-modal-lg" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="responseModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Generating...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="response-text">
+<p id="response-modal-text"> ABC Investments Internal Audit Progress Report</p>
+
+<p id="response-modal-text">Reporting Period: July 1, 2023 - August 15, 2023</p>
+
+<p id="response-modal-text">Executive Summary:
+  During the reporting period, the internal audit team at ABC Investments diligently 
+  <br> conducted audits across various departments to assess the effectiveness of 
+  <br> internal controls, compliance with regulatory requirements, and operational 
+  <br> efficiency.</p>
+
+<p id="response-modal-text">Audit Activities and Scope:</p>
+
+<p id="response-modal-text">The internal audit team performed audits on the following 
+  <br> areas: financial operations, risk management, IT systems, regulatory compliance, 
+  <br> and internal processes.
+  <br> A total of 12 audits were initiated, covering critical areas of the bank's 
+  <br> Key Findings:</p>
+
+<p id="response-modal-text">Loan Processing Audit:</p>
+
+<p id="response-modal-text">Identified discrepancies in loan documentation.
+  Recommended a centralized document management system to enhance accuracy and efficiency.
+  Investment Management Audit:</p>
+
+<p id="response-modal-text">Detected inconsistencies in investment portfolio reporting, impacting decision-making.
+  Suggested improved integration between investment tracking software and accounting systems.
+  AML Compliance Audit:</p>
+
+<p id="response-modal-text">Observed gaps in customer due diligence processes, 
+  <br> potentially exposing the bank to compliance risks.
+  <br> Proposed enhanced training for staff and updated AML procedures.
+  <br> IT Systems Audit:</p>
+
+<p id="response-modal-text">Uncovered vulnerabilities in data access controls, 
+  <br> highlighting potential data breaches.
+  <br> Advised a comprehensive review of access permissions and regular security assessments.
+  <br> Process Efficiency Audit:</p>
+
+<p id="response-modal-text">Identified inefficiencies in the reconciliation process, 
+  <br> leading to delays in financial reporting.
+  <br> Recommended automation of reconciliation procedures and real-time monitoring.
+  <br> Progress and Remediation:</p>
+
+<p id="response-modal-text">Submitted by:
+  Michael
+  Head of Accounting
+  ABC Investments</p>
+
+<p id="response-modal-text">Date: August 19, 2023</p>
+
+<p id="response-modal-text">Please let me know if there are any specific details 
+  <br> you would like to add or modify in this progress report, Michael.</p>
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" style="background: #d52349; border: none;">Retry</button>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- chat section -->
 	  <div id="chat-container">
@@ -107,10 +190,25 @@
 		  <!-- Chat messages will be displayed here -->
 		</div>
 		<input id="chat-input" type="text" placeholder="Type your message...">
-		<button id="send-button" style="color: black;" href="#"><i class="fas fa-paper-plane"></i></button>
+		<button id="send-button" style="color: black;"  href="#" data-bs-toggle="modal" data-bs-target="#responseModal"><i class="fas fa-paper-plane"></i></button>
 	  </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const paragraphs = document.querySelectorAll('#response-modal-text');
+      let currentParagraph = 0;
+
+      function typeParagraph() {
+          if (currentParagraph < paragraphs.length) {
+              paragraphs[currentParagraph].style.display = 'inline-block';
+              currentParagraph++;
+              setTimeout(typeParagraph, 100000); // Delay between paragraphs in milliseconds
+          }
+      }
+
+      typeParagraph();
+  </script>
     <script>
       // JavaScript code to start typing effect
       const infoText = document.getElementById('info-text');
@@ -125,7 +223,7 @@
         if (index === textContent.length) {
           clearInterval(typingInterval);
         }
-      }, 90); // Adjust typing speed in milliseconds
+      }, 50); // Adjust typing speed in milliseconds
 
       function isElementInViewport(element) {
       const rect = element.getBoundingClientRect();
